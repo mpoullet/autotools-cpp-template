@@ -1,6 +1,7 @@
 dnl autoscan && autoreconf -i && ./configure --disable-debug && cat my_config_file && make DESTDIR=/tmp/hello clean all install V=1
 dnl find /tmp/hello && /tmp/hello/usr/local/bin/hello
 dnl make dist && tar tf hello-1.0.tar.bz2 | sort
+dnl git clean -xdf
 
 dnl (Discard to Next Line) indicates a comment line
 dnl sudo apt-get install autoconf automake libtool shtool autogen
