@@ -14,6 +14,8 @@ AC_PREREQ([2.69])
 dnl Initialize Autoconf
 AC_INIT([hello], [1.0], [http://hello.org/])
 AC_MSG_NOTICE([Welcome to the AC_PACKAGE_NAME autoconf script.])
+dnl Auxiliary directory: must be placed before the calls to AM_INIT_AUTOMAKE and LT_INIT
+AC_CONFIG_AUX_DIR([build-aux])
 
 dnl Initialize Automake
 dnl Automake will generate Makefile.in at "autoreconf -i" time
