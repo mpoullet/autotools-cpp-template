@@ -1,0 +1,39 @@
+# Editors temporaries
+*.swp
+*~
+
+# Distribution tarballs
+*.tar.bz2
+*.tar.gz
+
+# Autotools temporaries
+autom4te.cache/
+autoscan.log
+compile
+config.status
+config.guess
+config.sub
+config.log
+configure
+configure.scan
+depcomp
+missing
+Makefile
+Makefile.in
+aclocal.m4
+install-sh
+stamp-h1
+
+# Configuration header
+config.hpp
+
+# Targets
+hello
+
+# Other configuration files
+my_config_file
+
+# Build temporaries
+src/.deps/
+src/.dirstamp
+src/*.o
