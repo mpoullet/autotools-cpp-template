@@ -24,3 +24,4 @@ AM_CXXFLAGS = -Wall -Wextra -Werror -pedantic
 # Flags for the C compiler
 AM_CFLAGS = -Wall -Wextra -Werror -pedantic
 
+include $(top_srcdir)/other_tool/Makefile.am

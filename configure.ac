@@ -41,6 +41,8 @@ dnl Check Boost version manually: dpkg -S /usr/include/boost/version.hpp
 AX_BOOST_BASE([1.58],, [AC_MSG_ERROR([AC_PACKAGE_NAME needs Boost, but it was not found in your system])])
 
 dnl Configuration header
+dnl Sanity test: check if the input template file exists in the current source tree
+AC_CONFIG_SRCDIR([config.hpp.in])
 dnl Autoheader will generate config.h.in at "autoreconf -i" time
 dnl -DHAVE_CONFIG_H automatically added to CXX command line
 AC_CONFIG_HEADERS([config.hpp])
