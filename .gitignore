@@ -23,7 +23,7 @@ stamp-h1
 config.hpp
 
 # Targets
-hello
+hello_cpp
 
 # Other configuration files
 my_config_file
@@ -32,3 +32,10 @@ my_config_file
 src/.deps/
 src/.dirstamp
 src/*.o
+
+other_tool/.dirstamp
+other_tool/other_tool
+other_tool/src/.deps/
+other_tool/src/.dirstamp
+other_tool/src/*.o
+
