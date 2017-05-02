@@ -5,6 +5,7 @@
 ## Requirements
 
 * autoconf-archive
+* Boost
 
 ## License
 Copyright (c) 2017 Matthieu Poullet
