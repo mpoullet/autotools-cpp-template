@@ -22,7 +22,7 @@ dnl Automake will generate Makefile.in at "autoreconf -i" time
 dnl so we need to add Makefile (without the .in extension) to AC_CONFIG_FILES
 dnl foreign tells automake to not require all the GNU Coding Style such as NEWS, README, AUTHORS
 dnl subdir-objects allows a Makefile ot reference code in another directory => needed for non-recursive make
-AM_INIT_AUTOMAKE([foreign dist-bzip2 subdir-objects 1.15])
+AM_INIT_AUTOMAKE([foreign dist-bzip2 subdir-objects 1.14])
 dnl configure will generate the final Makefile from Makefile.in
 AC_CONFIG_FILES([Makefile])
 dnl Silent rules: the output is quiet by default and verbose if V=1 is passed
