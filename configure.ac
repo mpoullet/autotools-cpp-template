@@ -38,7 +38,7 @@ AX_CXX_HAVE_STL
 
 dnl Check for Boost and set BOOST_CPPFLAGS and BOOST_LDFLAGS
 dnl Check Boost version manually: dpkg -S /usr/include/boost/version.hpp
-AX_BOOST_BASE([1.58],, [AC_MSG_ERROR([AC_PACKAGE_NAME needs Boost, but it was not found in your system])])
+AX_BOOST_BASE([1.54],, [AC_MSG_ERROR([AC_PACKAGE_NAME needs Boost, but it was not found in your system])])
 
 dnl Configuration header
 dnl Sanity test: check if the input template file exists in the current source tree
