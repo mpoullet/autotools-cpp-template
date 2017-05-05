@@ -1,21 +1,30 @@
 language:
-    - cpp
+- cpp
 dist:
-    - trusty
+- trusty
 compiler:
-    - gcc
-    - clang
+- gcc
+- clang
 before_install:
-    - sudo apt-get -qq update
+- sudo apt-get -qq update
 install:
-    - sudo apt-get install -y autoconf-archive
-    - sudo apt-get install -y libboost-all-dev
+- sudo apt-get install -y autoconf-archive
+- sudo apt-get install -y libboost-all-dev
 before_script:
-    - autoconf --version
-    - automake --version
+- autoconf --version
+- automake --version
 script:
-    - autoreconf --install
-    - ./configure
-    - make V=1 -j4 clean all dist
+- autoreconf --install
+- "./configure"
+- make V=1 -j4 clean all dist
 after_success:
-    - ./hello_cpp
+- "./hello_cpp"
+deploy:
+  provider: releases
+  api_key:
+    secure: y9ddZbHj8qij2mZ+2OD+BuQiH91U9mZF0JCUnaaNFWHHKqo1Jih4DtvYXuhemidNw1NYMkYsEcPGrIdorRugfcxKq0GsbmUksF1OqKbFo7C8EQeSYC0e81mnnJP04+XxZmiC2Nu9gBqNtl+SOhXRKOR0MTb8ymMVmWiE6Pn9SH+F89MWxQZU12FOZlR9tDozuT7MXZwroYNEiBGbuw/3f2/5lOmlKqU/w/O5TR/izde9T8ALLPyL8b5Y96nejDb0a+ph9HLHw4wL3ksoiEKMxIVnCt0R7A3Sj2G4kmbDgqR0vLB5tFy/cBgCpDVFAmbhAHlf3Ys/2N0bbj0umIVSEU6PeeTpL3trpPwxMcuTxL2NHCf1kzW/n8jqyTqGvGccRP7VQLxvb4zPtatb5qQuPY+nMmTfoalKf/ixdnBSS5j5sKNwCe95imDNy9ziHNvL3aNvCGnw9yquc2RjmlbWziKpf/p4miz+QZnkzvOdWQbItRQHHhKUtiaEVuC9Y+AB5ueAIhsiRgA77mCOrV/4pzZNaeoVjeOA/EKiwXWLIkBhslGEj5t162bKBTQJFOGImpMuAx7q91QOD2jiMn4OZWSwzHxqJVMzLDmkFy8horYXBe1hgJDgYPRgP3wQctoQa4qnRt+czfuku3Qoyn8MuReog6PWnuQc+gryKEswfVs=
+  file: hello_cpp-1.0.0.tar.bz2
+  skip_cleanup: true
+  on:
+    tags: true
+    repo: mpoullet/autotools-cpp-template
