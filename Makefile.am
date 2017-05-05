@@ -5,7 +5,7 @@ bin_PROGRAMS = hello_cpp
 # All files should be added so that make dist take them in the tarball
 # We do a non-recursive make so add the path to each file too
 hello_cpp_SOURCES = src/main.cpp \
-                src/main.hpp
+                    src/main.hpp
 
 # automake conditionals (conditional is set in configure.ac)
 if DEBUG_ENABLED
