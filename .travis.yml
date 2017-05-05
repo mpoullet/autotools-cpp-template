@@ -15,10 +15,10 @@ before_script:
 - automake --version
 script:
 - autoreconf --install
-- "./configure"
+- ./configure
 - make V=1 -j4 clean all dist
 after_success:
-- "./hello_cpp"
+- ./hello_cpp
 deploy:
   provider: releases
   api_key:
